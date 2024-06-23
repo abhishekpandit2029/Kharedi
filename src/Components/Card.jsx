@@ -55,13 +55,6 @@ function Card({ product, index }) {
                   <p className="font-bold text-sm  text-black ">50% off</p>
                 </div>
               </div>
-              <div>
-                {/* <img
-                  src="
-                https://media.istockphoto.com/id/1225603023/vector/100-satisfaction-guaranteed-stamp-on-white-background-vector-illustration.jpg?s=170667a&w=0&k=20&c=-aJLuqjIlWj29UTX3hGOju-PliLCgYfSXBfSx6PoPtI="
-                  alt="" className="w-[4rem] "
-                /> */}
-              </div>
             </div>
           </div>
         </div>

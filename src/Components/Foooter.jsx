@@ -10,7 +10,7 @@ function Foooter() {
           <BackToTop />
         </div>
         <div class="flex flex-wrap justify-center">
-          <div class="col-lg-2 col-md-4 col-sm-6 flex flex-col items-center mb-5 mx-6">
+          <div class="col-lg-2 col-md-4 col-sm-6 flex flex-col items-center mb-5 mx-0 md:mx-6">
             <h6 className="text-uppercase text-white font-bold relative pb-2.5 mb-[-0.625rem] border-red-400 w-[121px]">
               About
             </h6>
@@ -30,7 +30,7 @@ function Foooter() {
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-sm-6 flex flex-col items-center mb-5 mx-6">
+          <div class="col-lg-2 col-md-4 col-sm-6 flex flex-col items-center mb-5 mx-0 md:mx-6">
             <h6 class="footer-heading text-uppercase text-white tracking-[0.1875rem] font-bold relative pb-2.5 mb-[-0.625rem] border-b-2.5 border-[#fe8235] w-[121px]">
               Shop by
             </h6>
@@ -50,7 +50,7 @@ function Foooter() {
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-sm-6 flex flex-col items-center mb-5 mx-6">
+          <div class="col-lg-2 col-md-4 col-sm-6 flex flex-col items-center mb-5 mx-0 md:mx-6">
             <h6 class="footer-heading text-uppercase text-white tracking-[0.1875rem] font-bold relative pb-2.5 mb-[-0.625rem] border-b-2.5 border-[#fe8235] w-[121px]">
               Policy
             </h6>
@@ -70,7 +70,7 @@ function Foooter() {
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-sm-6 flex flex-col items-center mb-5 mx-6">
+          <div class="col-lg-2 col-md-4 col-sm-6 flex flex-col items-center mb-5 mx-0 md:mx-6">
             <h6 class="footer-heading text-uppercase text-white tracking-[0.1875rem] font-bold relative pb-2.5 mb-[-0.625rem] border-b-2.5 border-[#fe8235] w-[121px]">
               Help
             </h6>

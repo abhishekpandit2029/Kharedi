@@ -15,7 +15,7 @@ function Cart() {
   }, [cartItems]);
 
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full bg-zinc-100  h-full relative">
       {cartItems.length > 0 ? (
         <div className="w-full h-full flex flex-col">
           <div className="max-w-[300px] flex flex-col md:flex-row md:flex gap-10 py-[120px] md:max-w-[1000px] mx-auto">

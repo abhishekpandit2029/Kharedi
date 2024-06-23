@@ -27,7 +27,7 @@ function ProductDetails() {
     toast.error("Item Removed from Cart");
   }
   return (
-    <div className="w-full h-full pt-[6.2rem] relative">
+    <div className="w-full bg-zinc-100 h-full pt-[6.2rem] relative">
       <div className="max-w-[1000px] mx-auto flex flex-col">
         <div className="pl-5 pt-3">
           <Back />
