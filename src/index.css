@@ -35,3 +35,7 @@ body {
     background-position: left;
   }
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

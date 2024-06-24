@@ -9,7 +9,7 @@ function Back() {
         onClick={() => {
           navigate(-1);
         }}
-        className="bg-black rounded-md text-white px-4 py-1 text-lg"
+        className="bg-black rounded-md text-white px-4 py-1 text-md"
       >
         Back
       </button>

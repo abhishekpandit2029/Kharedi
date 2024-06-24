@@ -4,9 +4,7 @@ import { toast } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { add, remove, addProductDetails } from "../Redux/slices/CartSlice";
 import Card from "../Components/Card";
-import Foooter from "../Components/Foooter";
-import BackToTop from "../Components/BackToTop";
-import Back from "../Components/Back";
+
 function ProductDetails() {
   const { cartItems, productDetails, products } = useSelector(
     (state) => state.cart
@@ -27,11 +25,8 @@ function ProductDetails() {
     toast.error("Item Removed from Cart");
   }
   return (
-    <div className="w-full bg-zinc-100 h-full pt-[6.2rem] relative">
+    <div className="w-full bg-zinc-100 h-full relative">
       <div className="max-w-[1000px] mx-auto flex flex-col">
-        <div className="pl-5 pt-3">
-          <Back />
-        </div>
         <div className="max-w-[1000px] mx-auto flex flex-col  md:flex-row justify-evenly items-center py-5 ">
           <div className="w-full flex items-center justify-center  md:w-1/5">
             {thumbnail ? (
@@ -99,7 +94,7 @@ function ProductDetails() {
             </div>
           </div>
         </div>
-        <div className="max-w-[1000px] mx-auto flex flex-col items-center  gap-5 my-20">
+        <div className="max-w-[1000px] mx-auto flex flex-col items-center gap-5 my-10">
           <div>
             <p className="md:pl-0 text-xl md:text-3xl  uppercase font-bold text-black ">
               Related Products

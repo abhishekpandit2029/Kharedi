@@ -18,16 +18,13 @@ function Cart() {
     <div className="w-full bg-zinc-100  h-full relative">
       {cartItems.length > 0 ? (
         <div className="w-full h-full flex flex-col">
-          <div className="max-w-[300px] flex flex-col md:flex-row md:flex gap-10 py-[120px] md:max-w-[1000px] mx-auto">
-            <div className="">
-              <Back />
-            </div>
+          <div className="max-w-[300px] flex flex-col md:flex-row md:flex gap-10 py-[15px] md:max-w-[1000px] mx-auto">
             <div className="md:w-[70%]   ">
               {cartItems.map((item, index) => {
                 return <CartItem item={item} />;
               })}
             </div>
-            <div className="md:w-[45%] h-[20rem] md:h-[30rem] pt-8 flex flex-col md:justify-between mx-auto  ">
+            <div className="md:w-[45%] h-[12rem] md:h-[30rem] flex flex-col md:justify-between mx-4">
               <div className="flex flex-col gap-3">
                 <div className="flex flex-col gap-0">
                   <p className="font-bold text-lg text-black">Your Cart </p>

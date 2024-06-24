@@ -85,7 +85,7 @@ function Navbar() {
         </div>
         <div className="flex space-x-4">
           <div
-            className={`md:px-0 md:w-full md:block hidden mx-auto justify-between gap-14 items-center py-2 md:top-0 text-white`}
+            className={`md:px-0 md:w-full mx-auto justify-between gap-14 items-center py-2 md:top-0 text-white`}
           >
             <NavLink
               to="/Products"
@@ -98,17 +98,6 @@ function Navbar() {
           </div>
           <div className="flex gap-5 md:gap-5 items-center">
             <div className="relative flex gap-3 items-center">
-              <div>
-                <div ref={ref}>
-                  <IoSearch
-                    className="md:hidden block font-semibold text-xl"
-                    onClick={() => {
-                      setShowSearch(!showSearch);
-                    }}
-                  />
-                </div>
-              </div>
-
               <div className="group relative">
                 <abbr title=" Cart ">
                   <NavLink

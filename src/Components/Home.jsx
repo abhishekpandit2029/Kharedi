@@ -81,14 +81,14 @@ function Home() {
       ) : products.length > 0 ? (
         <div>
           <div className="w-full bg-zinc-900 relative">
-            <div className="max-w-[1100px] mx-auto flex flex-col gap-5 py-16">
+            <div className="max-w-[1100px] mx-auto flex flex-col gap-5 py-4 md:py-8">
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-[#FF7F00] flex gap-3 items-center justify-center ">
                   Trending
                   <IoTrendingUp className="font-bold text-white" />
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 mx-4">
+              <div className="flex flex-wrap justify-evenly gap-y-2 gap-x-4 mx-4">
                 {TrendingProducts.map((product, index) => {
                   return <Card product={product} key={index} />;
                 })}
@@ -96,13 +96,13 @@ function Home() {
             </div>
           </div>
           <div className="w-full bg-zinc-100 relative">
-            <div className="max-w-[1100px] mx-auto flex flex-col gap-5 py-16">
+            <div className="max-w-[1100px] mx-auto flex flex-col gap-5 py-8">
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-[#FF7F00] flex gap-3 items-center justify-center">
                   Jewelery <GiBigDiamondRing className="font-bold text-black" />
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 mx-4">
+              <div className="flex flex-wrap justify-evenly gap-y-2 gap-x-4 mx-4">
                 {Jewelery.map((product, index) => {
                   return <Card product={product} key={index} />;
                 })}
@@ -110,13 +110,13 @@ function Home() {
             </div>
           </div>
           <div className="w-full bg-zinc-900 relative">
-            <div className="max-w-[1100px] mx-auto flex flex-col gap-5 py-16">
+            <div className="max-w-[1100px] mx-auto flex flex-col gap-5 py-8">
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-[#FF7F00] flex gap-3 items-center justify-center">
                   Womens Clothing <GiPoloShirt className=" text-white" />
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 mx-4">
+              <div className="flex flex-wrap justify-evenly gap-y-2 gap-x-4 mx-4">
                 {WomensClothing.map((product, index) => {
                   return <Card product={product} key={index} />;
                 })}
@@ -124,13 +124,13 @@ function Home() {
             </div>
           </div>
           <div className="w-full bg-zinc-100 relative">
-            <div className="max-w-[1100px] mx-auto flex flex-col gap-5 py-16">
+            <div className="max-w-[1100px] mx-auto flex flex-col gap-5 py-8">
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-[#FF7F00] flex gap-3 items-center justify-center ">
                   Electronics <FaSdCard className="font-bold text-black " />
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 mx-4">
+              <div className="flex flex-wrap justify-evenly gap-y-2 gap-x-4 mx-4">
                 {Electronics.map((product, index) => {
                   return <Card product={product} key={index} />;
                 })}

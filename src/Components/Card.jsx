@@ -20,7 +20,7 @@ function Card({ product, index }) {
   }
 
   return (
-    <div className="w-[240px] h-[350px] mx-auto flex bg-white flex-col justify-between px-5 py-4 border rounded-3xl shadow-2xl shadow-slate-600 mb-10 hover:scale-105 transition-all duration-300 z-20">
+    <div className="w-[240px] h-[350px] mx-auto flex bg-white flex-col justify-between px-5 py-4 border rounded-3xl shadow-2xl shadow-slate-600 mb-5 hover:scale-105 transition-all duration-300 z-20">
       <div className=" h-[250px] flex flex-col justify-between">
         <div
           className="h-[18rem] flex items-center justify-center"
