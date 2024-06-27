@@ -15,34 +15,34 @@ function Navbar() {
     dispatch(addproduct(products));
   }, [dispatch, cartItems]);
 
-  function Searchbar() {
-    return (
-      <label htmlFor="search" className="flex place-content-center">
-        <input
-          type="text"
-          id="search"
-          name="search"
-          value={searchItem}
-          required
-          onChange={(e) => {
-            dispatch(search(e.target.value));
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          placeholder="Search Product"
-          className="w-[16rem] sm:w-[24rem] py-1 px-3 rounded-md text-black  border-gray-100"
-        />
-        <Link
-          to={`/Category/${searchItem}`}
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          className="flex justify-end"
-        >
-          <IoSearch className="relative top-2 right-6 text-black font-semibold" />
-        </Link>
-      </label>
-    )
-  }
+  // function Searchbar() {
+  //   return (
+  //     <label htmlFor="search" className="flex place-content-center">
+  //       <input
+  //         type="text"
+  //         id="search"
+  //         name="search"
+  //         value={searchItem}
+  //         required
+  //         onChange={(e) => {
+  //           dispatch(search(e.target.value));
+  //           window.scrollTo({ top: 0, behavior: "smooth" });
+  //         }}
+  //         placeholder="Search Product"
+  //         className="w-[16rem] sm:w-[24rem] py-1 px-3 rounded-md text-black  border-gray-100"
+  //       />
+  //       <Link
+  //         to={`/Category/${searchItem}`}
+  //         onClick={() => {
+  //           window.scrollTo({ top: 0, behavior: "smooth" });
+  //         }}
+  //         className="flex justify-end"
+  //       >
+  //         <IoSearch className="relative top-2 right-6 text-black font-semibold" />
+  //       </Link>
+  //     </label>
+  //   )
+  // }
 
   return (
     <div className="w-full bg-zinc-900 text-white shadow-lg px-6 py-4">
@@ -55,9 +55,6 @@ function Navbar() {
           <p className="font-bold text-2xl md:text-3xl">Kharedi</p>
         </NavLink>
         {/* search bar  */}
-        <div className="hidden md:flex items-center">
-          {Searchbar()}
-        </div>
         <div className="flex space-x-4">
           <div
             className={`md:px-0 md:w-full mx-auto justify-between gap-14 items-center py-2 md:top-0 text-white`}
@@ -91,11 +88,6 @@ function Navbar() {
             </div>
           </div>
         </div>
-      </div>
-
-
-      <div className="flex justify-center md:hidden mt-4">
-        {Searchbar()}
       </div>
     </div>
   );
