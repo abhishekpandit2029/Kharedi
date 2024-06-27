@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { add, remove, addProductDetails } from "../Redux/slices/CartSlice";
 import Card from "../Components/Card";
 
@@ -11,9 +10,6 @@ function ProductDetails() {
   );
   const { id, title, thumbnail, image, description, price } = productDetails;
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  // const [product, setProduct] = useState();
-  console.log(products);
   const product = products.slice(0, 8);
 
   function addToCart() {

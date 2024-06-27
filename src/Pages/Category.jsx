@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../Components/Card";
 import Loader from "../Components/Loader";
 import { useSelector } from "react-redux";
-import Back from "../Components/Back";
-import Foooter from "../Components/Foooter";
-import BackToTop from "../Components/BackToTop";
 
 function Category() {
   const { searchItem } = useSelector((state) => state.cart);
@@ -27,18 +24,15 @@ function Category() {
   }
   useEffect(() => {
     fetchProducts();
-  }, [searchItem]);
+  }, [searchItem, fetchProducts]);
 
   return (
-    <div className="w-full h-full mx-auto pt-[120px] md:pt-[40px] relative">
+    <div className="w-full h-full mx-auto relative">
       {loading ? (
         <Loader />
       ) : products.length > 0 ? (
         <div className="">
-          <div className="max-w-[1000px] mx-auto flex flex-col gap-10 mt-14 ">
-            <div>
-              <Back />
-            </div>
+          <div className="max-w-[1000px] mx-auto flex flex-col">
             <div className="flex items-center justify-center">
               {searchItem.length > 0 ? (
                 <p className="text-3xl uppercase font-bold ">{searchItem}</p>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../Redux/slices/CartSlice";

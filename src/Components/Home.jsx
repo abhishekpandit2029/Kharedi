@@ -2,19 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card";
 import Loader from "./Loader";
-import { Carousel } from "flowbite-react";
 import { useDispatch } from "react-redux";
 import { addproduct } from "../Redux/slices/CartSlice";
-import { Link, NavLink } from "react-router-dom";
-import Foooter from "./Foooter";
+import { Link } from "react-router-dom";
 import { IoTrendingUp } from "react-icons/io5";
-import { FaMobileAlt } from "react-icons/fa";
-import { FaLaptop } from "react-icons/fa";
 import { GiBigDiamondRing } from "react-icons/gi";
 import { FaSdCard } from "react-icons/fa6";
 import { GiPoloShirt } from "react-icons/gi";
-import { TbPerfume } from "react-icons/tb";
-import BackToTop from "./BackToTop";
+
 function Home() {
   const Url = "https://fakestoreapi.com/products";
   const Url2 = "https://dummyjson.com/products";
@@ -32,7 +27,6 @@ function Home() {
         setTrendingProducts(Response.data.slice(0, 4));
         setProducts(Response.data);
         dispatch(addproduct(Response.data));
-        // console.log(Response.data);
       });
     } catch (error) {
       console.log(error);
@@ -42,9 +36,7 @@ function Home() {
     setloading(true);
     try {
       await axios.get(Url2).then((Response) => {
-        // setSmartphones(Response.data.products);
         setSmartphone(Response.data.products);
-        // console.log(Response.data.products);
       });
     } catch (error) {
       console.log(error);

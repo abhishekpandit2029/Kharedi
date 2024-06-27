@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../Components/Card";
 import Loader from "../Components/Loader";
 import axios from "axios";
-import Back from "./Back";
-import Foooter from "./Foooter";
-import BackToTop from "./BackToTop";
 
 function AllProducts() {
   const Url = "https://fakestoreapi.com/products";
@@ -46,10 +43,7 @@ function AllProducts() {
       {loading ? (
         <Loader />
       ) : products.length > 0 ? (
-        <div className="max-w-[1000px] mx-auto flex flex-col gap-5 my-10">
-          <div className="ml-4">
-            <Back />
-          </div>
+        <div className="max-w-[1000px] mx-auto flex flex-col mb-4">
           <div>
             <p className="md:pl-0 text-xl md:text-3xl text-center  uppercase font-bold text-black ">
               All Products

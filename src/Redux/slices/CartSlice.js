@@ -13,7 +13,6 @@ export const CartSlice = createSlice({
   reducers: {
     add: (state, action) => {
       state.cartItems.push(action.payload);
-      console.log(state.cartItems);
     },
     remove: (state, action) => {
       state.cartItems = state.cartItems.filter(

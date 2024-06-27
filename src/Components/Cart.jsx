@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartItem from "./CartItem";
-import Foooter from "./Foooter";
-import Back from "./Back";
-import BackToTop from "./BackToTop";
 
 function Cart() {
   const { cartItems } = useSelector((state) => state.cart);
@@ -21,7 +18,7 @@ function Cart() {
           <div className="max-w-[300px] flex flex-col md:flex-row md:flex gap-10 py-[15px] md:max-w-[1000px] mx-auto">
             <div className="md:w-[70%]   ">
               {cartItems.map((item, index) => {
-                return <CartItem item={item} />;
+                return <CartItem item={item} key={index} />;
               })}
             </div>
             <div className="md:w-[45%] h-[12rem] md:h-[30rem] flex flex-col md:justify-between mx-4">

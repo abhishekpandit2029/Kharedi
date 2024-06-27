@@ -1,42 +1,17 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { add, search } from "../Redux/slices/CartSlice";
-import { IoMdClose } from "react-icons/io";
+import { search } from "../Redux/slices/CartSlice";
 import { GiShoppingCart } from "react-icons/gi";
 import { addproduct } from "../Redux/slices/CartSlice";
 
 function Navbar() {
   const { cartItems, searchItem } = useSelector((state) => state.cart);
-  const [showClose, setShowClose] = useState(false);
-  const [showSearch, setShowSearch] = useState(false);
-  const [cartDiv, setShowCartDiv] = useState(false);
   const { products } = useSelector((state) => state.cart);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [TotalAmount, setTotalAmount] = useState(0);
-  const ref = useRef(null);
-
-  const handleClickOutside = (event) => {
-    if (ref.current && !ref.current.contains(event.target)) {
-      setShowCartDiv(false);
-      setShowSearch(false);
-      setShowClose(false);
-    }
-  };
 
   useEffect(() => {
-    window.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      window.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  useEffect(() => {
-    setTotalAmount(cartItems.reduce((acc, curr) => acc + curr.price, 0));
     dispatch(addproduct(products));
   }, [dispatch, cartItems]);
 

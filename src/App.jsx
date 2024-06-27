@@ -1,5 +1,3 @@
-import React from "react";
-// import { useSelector } from "react-redux";
 import Navbar from "./Components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";

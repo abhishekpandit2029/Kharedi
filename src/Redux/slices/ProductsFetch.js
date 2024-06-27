@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
 
 const Url = "https://fakestoreapi.com/products";
 
@@ -20,10 +19,10 @@ export const ProductsSlice = createSlice({
       state.isLoading = false;
       state.data = action.payload;
     });
-    builder.addCase(ProductsFetch.pending, (state, action) => {
+    builder.addCase(ProductsFetch.pending, (state) => {
       state.isLoading = true;
     });
-    builder.addCase(ProductsFetch.rejected, (state, action) => {
+    builder.addCase(ProductsFetch.rejected, (state) => {
       state.isError = true;
     });
   },

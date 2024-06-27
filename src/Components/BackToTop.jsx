@@ -1,4 +1,3 @@
-import React from "react";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 
 function BackToTop() {
